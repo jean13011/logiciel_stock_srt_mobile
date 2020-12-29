@@ -1,0 +1,14 @@
+body
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: auto;
+    background-color: #e0e1e2;
+}
+
+#login-form > ul{
+    color: red;
+}
+
+body > div.d-flex.justify-content-center > span > div > form > div:nth-child(2) > div > ul > li{
+    color: red;
+}

@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau produit{% endblock %}
+
+{% block body %}
+    <div class="d-flex justify-content-center">
+        <span class="border border-dark p-6 rounded bg-white shadow-lg p-3 mb-5 bg-white rounded mt-5">
+            <div class=" align-items-center ">
+                <h1>Entrer un nouveau produit</h1>
+                {{ form_start(form) }}
+                <div class="input-group input-group-sm mb-3 justify-content-center  ">
+                    {{ form_row(form.name) }}
+                </div>
+                <div class="input-group input-group-sm mb-3 justify-content-center">
+                    {{ form_row(form.reference) }}
+                </div>
+                <div class="input-group input-group-sm mb-3 justify-content-center w-75 p-3" >
+                    {{ form_row(form.quantity) }}
+                </div>
+                <div class="input-group input-group-sm mb-3 justify-content-center">
+                    {{ form_row(form.emplacement) }}
+                </div>
+
+                <div class="input-group input-group-sm mb-3 justify-content-center"  style="display : none">
+                    {{ form_row(form.date)}}
+                </div>
+                <br><br>
+                <div class="input-group input-group-sm mb-3 justify-content-center">
+                    <button type="submit" class="btn btn-primary justify-content-center w-50 p-3">envoyer </button>
+                </div>
+                    <br>
+                    <br>
+                    {% if code != "" %}
+                        <div class="justify-content-center">
+                            <p class="d-flex justify-content-center">votre code barre (n'oubliez pas de l'enregistrer): </p>
+                            <br>
+                            <img src="data:image/png;base64,{{code}}" alt="bare_code" class="img-fluid" style="margin-left: 100px">
+                        </div>
+                    {% endif %}
+                    {{ form_rest(form) }}
+                {{ form_end(form) }}
+            </div>
+        </span>
+    </div>
+{% endblock %}

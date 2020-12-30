@@ -1,6 +1,6 @@
 export * from "./modifyQuantity.js"
 
-export var number = parseInt(document.querySelector("#quantity").textContent);
+var number = parseInt(document.querySelector("#quantity").textContent);
 
 /**
  * this function is call if the button + is clicked , it add 1 at the current number and send it to modifyQuantity for the treatment with ajax

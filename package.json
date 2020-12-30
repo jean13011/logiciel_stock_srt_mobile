@@ -16,6 +16,8 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "sw-toolbox": "^3.6.0"
+        "register-service-worker": "^1.7.2",
+        "sw-toolbox": "^3.6.0",
+        "workbox-sw": "^6.0.2"
     }
 }

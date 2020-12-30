@@ -11,14 +11,8 @@ import './styles/app.css';
 // start the Stimulus application
 import './bootstrap';
 
-import './modifyQuantity.js'
+import './modifyQuantity.js';
 
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw-test/sw.js', { scope: '/sw-test/' }).then(function(reg) {
-      // registration worked
-      console.log('Registration succeeded. Scope is ' + reg.scope);
-    }).catch(function(error) {
-      // registration failed
-      console.log('Registration failed with ' + error);
-    });
-};
+import './sw.js';
+
+
